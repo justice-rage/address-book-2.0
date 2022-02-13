@@ -5,6 +5,11 @@ function AddressBook()  {
   this.contacts = {};
 }
 
+AddressBook.prototype.addContact = function(contact)
+{
+  this.contacts[contact.firstName] = contact;
+}
+
 // business logic for Contacts
 function Contact(firstName, lastName, phoneNumber)  {
   this.firstName = firstName;
