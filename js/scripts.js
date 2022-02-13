@@ -27,3 +27,10 @@ function Contact(firstName, lastName, phoneNumber)  {
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 };
+
+AddressBook.prototype.findContact = function(id)  {
+  if (this.contacts[id] != undefined) {
+    return this.contacts[id];
+  }
+  return false;
+};
