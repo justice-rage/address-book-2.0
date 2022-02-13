@@ -1,9 +1,11 @@
 // business logic
 
+// business logic for AddressBook
 function AddressBook()  {
   this.contacts = {};
 }
 
+// business logic for Contacts
 function Contact(firstName, lastName, phoneNumber)  {
   this.firstName = firstName;
   this.lastName = lastName;
