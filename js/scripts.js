@@ -17,17 +17,6 @@ AddressBook.prototype.addContact = function(contact)
   this.contacts[contact.id] = contact;
 }
 
-// business logic for Contacts
-function Contact(firstName, lastName, phoneNumber)  {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.phoneNumber = phoneNumber;
-}
-
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
-};
-
 AddressBook.prototype.findContact = function(id)  {
   if (this.contacts[id] != undefined) {
     return this.contacts[id];
@@ -41,4 +30,15 @@ AddressBook.prototype.deleteContact = function(id)  {
   }
   delete this.contacts[id];
   return true;
+};
+
+// business logic for Contacts
+function Contact(firstName, lastName, phoneNumber)  {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.phoneNumber = phoneNumber;
+}
+
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
 };
